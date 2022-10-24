@@ -1,0 +1,17 @@
+name: Test workflow
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+
+
+jobs:
+  testing:
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Do something
+        run: |
+          FOO="${{secrets.FAKE_PAT}}" echo "testing"

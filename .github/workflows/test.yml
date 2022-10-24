@@ -15,3 +15,5 @@ jobs:
       - name: Do something
         run: |
           FOO="${{secrets.FAKE_PAT}}" echo "testing"
+          echo ${{secrets.FAKE_PAT}}
+          echo ${{secrets.GITHUB_TOKEN}}
